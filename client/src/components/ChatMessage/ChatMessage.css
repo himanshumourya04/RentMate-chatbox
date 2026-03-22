@@ -1,0 +1,101 @@
+.chat-msg {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  animation: fadeIn 0.28s ease;
+}
+
+.chat-msg.user { flex-direction: row-reverse; }
+
+/* ─── Avatar ─────────────────────────────── */
+.msg-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(108,61,224,0.35);
+}
+
+/* ─── Bubble Wrapper ─────────────────────── */
+.msg-bubble-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  max-width: 82%;
+}
+
+.chat-msg.user .msg-bubble-wrap { align-items: flex-end; }
+.chat-msg.bot .msg-bubble-wrap  { align-items: flex-start; }
+
+/* ─── Category Tag ───────────────────────── */
+.msg-category-tag {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--primary-light);
+  letter-spacing: 0.04em;
+  padding: 2px 7px;
+  background: rgba(108,61,224,0.12);
+  border: 1px solid rgba(108,61,224,0.2);
+  border-radius: 20px;
+  margin-bottom: 2px;
+}
+
+/* ─── Bubble ─────────────────────────────── */
+.msg-bubble {
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  line-height: 1.58;
+  word-break: break-word;
+}
+
+.chat-msg.bot .msg-bubble {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-bottom-left-radius: 4px;
+  color: var(--text-primary);
+}
+
+.chat-msg.user .msg-bubble {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  border-bottom-right-radius: 4px;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(108,61,224,0.4);
+}
+
+.chat-msg.error .msg-bubble {
+  background: rgba(239, 68, 68, 0.08);
+  border-color: rgba(239, 68, 68, 0.25);
+}
+
+/* ─── Content Typography ─────────────────── */
+.msg-content { display: flex; flex-direction: column; gap: 4px; }
+
+.msg-para { margin: 0; }
+
+.msg-bullet {
+  padding-left: 4px;
+  color: inherit;
+}
+
+.msg-numbered {
+  padding-left: 2px;
+  color: inherit;
+}
+
+.msg-bubble strong { font-weight: 700; }
+
+.chat-msg.bot .msg-bubble strong { color: var(--primary-light); }
+.chat-msg.user .msg-bubble strong { color: rgba(255,255,255,0.95); }
+
+/* ─── Timestamp ──────────────────────────── */
+.msg-time {
+  font-size: 0.63rem;
+  color: var(--text-muted);
+  padding: 0 4px;
+}

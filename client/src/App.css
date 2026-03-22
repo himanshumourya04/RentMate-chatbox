@@ -1,0 +1,89 @@
+/* App-level layout + demo landing page */
+.app {
+  min-height: 100vh;
+  background: radial-gradient(ellipse at 20% 50%, rgba(108, 61, 224, 0.12) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 10%, rgba(14, 165, 233, 0.08) 0%, transparent 50%),
+              var(--bg-dark);
+}
+
+/* ─── Demo Hero ─────────────── */
+.demo-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 2rem;
+  gap: 1.25rem;
+}
+
+.demo-badge {
+  display: inline-block;
+  padding: 0.35rem 1rem;
+  background: rgba(108, 61, 224, 0.15);
+  border: 1px solid rgba(108, 61, 224, 0.35);
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--primary-light);
+  letter-spacing: 0.04em;
+}
+
+.demo-title {
+  font-size: clamp(2.4rem, 6vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text-primary);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.demo-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 500px;
+}
+
+.demo-stats {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 0.5rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.stat span {
+  font-size: 1.6rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary-light), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.demo-hint {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-top: 0.4rem;
+  animation: fadeIn 1s ease 1.5s both;
+}
