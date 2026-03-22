@@ -90,3 +90,17 @@
   justify-content: center;
   animation: fadeIn 0.3s ease;
 }
+
+/* ─── Responsive Adjustments ──────────────── */
+@media (max-width: 480px) {
+  .chat-widget {
+    bottom: 20px;
+    right: 20px;
+  }
+  .chat-toggle-btn {
+    width: 52px;
+    height: 52px;
+  }
+  .ring-1 { width: 62px; height: 62px; top: -5px; left: -5px; }
+  .ring-2 { width: 74px; height: 74px; top: -11px; left: -11px; }
+}

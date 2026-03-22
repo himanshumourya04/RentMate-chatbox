@@ -131,14 +131,23 @@
     linear-gradient(to bottom, rgba(108,61,224,0.03) 0%, transparent 80%);
 }
 
-/* ─── Mobile Responsive ──────────────────────────── */
-@media (max-width: 440px) {
+/* ─── Responsive Design ──────────────────────────── */
+@media (max-width: 768px) {
   .chat-window {
-    width: calc(100vw - 24px);
-    height: 75vh;
-    bottom: 76px;
-    right: 0;
-    left: 12px;
+    width: 350px;
+    height: 520px;
+    bottom: 84px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chat-window {
+    width: calc(100vw - 32px);
+    height: calc(100svh - 100px); /* Use svh for better mobile browser height */
+    bottom: 84px;
+    right: 16px;
+    left: 16px;
     border-radius: var(--radius-lg);
   }
 }
